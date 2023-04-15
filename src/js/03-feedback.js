@@ -18,7 +18,11 @@ if (formValues) {
 
 function submitOn(event) {
   event.preventDefault();
-  localStorage.clear();
+  localStorage.removeItem(keyFeedbackForm);
+
+  if (email.value === '' || message.value === '') {
+    return alert('Please fill in all the fields!');
+  }
 
   console.log(formValues);
   event.currentTarget.reset();

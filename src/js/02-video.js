@@ -7,7 +7,6 @@ const currentTime = 'videoplayer-current-time';
 const localCurrentTime = localStorage.getItem(currentTime);
 
 const onPlay = function (timeupdate) {
-  console.log(timeupdate);
   localStorage.setItem(currentTime, timeupdate.seconds);
 };
 
